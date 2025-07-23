@@ -1,10 +1,9 @@
 from __future__ import annotations
-import asyncio
 from typing import List
 import aiohttp
 from typing import Dict
-from settings import Settings
-from MarkerSet import MarkerSet
+from src.settings import Settings
+from src.MarkerSet import MarkerSet
 
 class AsyncClient:
     def __init__(self, base_url:str):

@@ -1,5 +1,5 @@
 import asyncio
-from asyncclient import AsyncClient
+from src.clients.asyncclient import AsyncClient
 
 async def main():
     client = AsyncClient(base_url='http://map.eldrath.com:20098')

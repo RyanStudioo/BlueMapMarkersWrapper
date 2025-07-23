@@ -1,16 +1,13 @@
 from __future__ import annotations
 import time
 from concurrent.futures import ThreadPoolExecutor
-from typing import Dict, Union, Iterable
+from typing import Iterable
 import numpy as np
 
-from markers.markers import _get_markers
+from src.markers.markers import _get_markers
 if annotations:
-    from markers.ExtrudeMarker import ExtrudeMarker
-    from markers.HTMLMarker import HTMLMarker
-    from markers.POIMarker import POIMarker
-    from markers.LineMarker import LineMarker
-    from markers.ShapeMarker import ShapeMarker
+    pass
+
 
 class MarkerSet:
     def __init__(self, key:str, label:str, markers:Iterable):
