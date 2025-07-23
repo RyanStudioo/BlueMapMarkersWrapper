@@ -1,5 +1,5 @@
 import asyncio
-from BlueMapWrapper import AsyncClient, plugins
+from BlueMapWrapper import AsyncClient, marker_keys
 
 async def main():
     # printing out all players and lands plugin markers
@@ -8,7 +8,7 @@ async def main():
     for player in collection.player_collection.players:   # Iterate through all players
         print(f"Player: {player.name}\nPosition: {player.position}")
     marker_collection = collection.marker_collection   # Getting MarkerCollection Object from Collection
-    lands = marker_collection.from_key(plugins.LANDS)   # Getting Marker for Lands Plugin
+    lands = marker_collection.from_key(marker_keys.LANDS)   # Getting Marker for Lands Plugin
     for marker in lands.markers:   # Iterate though markers in lands
         print(f"Name: {marker.label}\nPosition: {marker.position}")
     await client.close()   # Close client after use

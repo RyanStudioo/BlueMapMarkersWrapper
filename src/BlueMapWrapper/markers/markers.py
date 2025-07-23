@@ -15,6 +15,8 @@ markerTypes = {'poi': POIMarker,
                'extrude': ExtrudeMarker}
 
 def get_markers(response:tuple) -> Union[POIMarker, HTMLMarker, LineMarker, ShapeMarker, ExtrudeMarker]:
+    """Identify and create a Marker Object based on its type.
+    Response obtained from markers.json -> MarkerSet -> Markers -> Marker"""
     key = response[0]
     marker_type = response[1]['type']
     return markerTypes[marker_type]._from_response((key, response[1]))

@@ -3,6 +3,7 @@ if annotations:
     from .BaseMarker import BaseMarker
 
 class LineMarker(BaseMarker):
+    """A Line marker is a line consisting of atleast 2 coordinates"""
     def __init__(self, key: str, label: str, position: dict, line:list, detail:str=None):
         super().__init__(key, label, position)
         self.line = line
@@ -10,6 +11,8 @@ class LineMarker(BaseMarker):
 
     @staticmethod
     def _from_response(response: tuple) -> "LineMarker":
+        """Create a LineMarker object from markers.json.
+                Response obtained from markers.json -> MarkerSet -> Markers -> LineMarker"""
         key = response[0]
         response = response[1]
         label = response['label']

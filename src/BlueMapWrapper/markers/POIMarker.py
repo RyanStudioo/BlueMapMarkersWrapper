@@ -3,6 +3,7 @@ if annotations:
     from .BaseMarker import BaseMarker
 
 class POIMarker(BaseMarker):
+    """A POI Marker is a single labeled point on a map"""
     def __init__(self, key: str, label: str, position:dict, detail:str=None, icon:str=None,
                  anchor: dict=None, classes:list=None):
         super().__init__(key,label, position)
@@ -13,6 +14,8 @@ class POIMarker(BaseMarker):
 
     @staticmethod
     def _from_response(response: tuple) -> "POIMarker":
+        """Create a POIMarker object from markers.json.
+        Response obtained from markers.json -> MarkerSet -> Markers -> POIMarker"""
         key = response[0]
         response = response[1]
         label = response['label']

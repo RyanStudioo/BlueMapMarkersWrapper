@@ -3,6 +3,7 @@ if annotations:
     from .BaseMarker import BaseMarker
 
 class ExtrudeMarker(BaseMarker):
+    """An Extrude Marker is a 3D shape"""
     def __init__(self, key: str, label: str, position: dict, shape:list, shape_min_y:int, shape_max_y:int, detail:str=None):
         super().__init__(key, label, position)
         self.shape = shape
@@ -12,6 +13,8 @@ class ExtrudeMarker(BaseMarker):
 
     @staticmethod
     def _from_response(response: tuple) -> "ExtrudeMarker":
+        """Create an ExtrudeMarker object from markers.json.
+        Response obtained from markers.json -> MarkerSet -> Markers -> ExtrudeMarker"""
         key = response[0]
         response = response[1]
         label = response['label']
