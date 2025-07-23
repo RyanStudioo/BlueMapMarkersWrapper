@@ -17,7 +17,7 @@ class ExtrudeMarker(BaseMarker):
         label = response['label']
         position = response['position']
         shape = response['shape']
-        shape_min_y = response['shape_min_y']
-        shape_max_y = response['shape_max_y']
+        shape_min_y = response['shape-min-y']
+        shape_max_y = response['shape-max-y']
         detail = response['detail']
         return ExtrudeMarker(key, label, position, shape, shape_min_y, shape_max_y, detail=detail)

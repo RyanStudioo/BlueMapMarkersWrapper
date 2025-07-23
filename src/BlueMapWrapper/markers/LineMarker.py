@@ -11,6 +11,7 @@ class LineMarker(BaseMarker):
     @staticmethod
     def _from_response(response: tuple) -> "LineMarker":
         key = response[0]
+        response = response[1]
         label = response['label']
         position = response['position']
         line = response['line']

@@ -1,9 +1,12 @@
 from __future__ import annotations
+
+import asyncio
 from typing import List
 import aiohttp
 from typing import Dict
 from ..settings import Settings
 from ..MarkerSet import MarkerSet
+from ..Collection import Collection
 
 class AsyncClient:
     def __init__(self, base_url:str):
@@ -13,15 +16,13 @@ class AsyncClient:
     async def fetch_maps(self):
         settings_link = f"{self._base_url}/settings.json"
         settings_response = await self._get_json(settings_link)
-        settings = Settings._from_response(settings_response)
+        settings = Settings.from_response(settings_response)
         return settings.maps
 
-    async def fetch_markers(self, world) -> List[MarkerSet]:
+    async def from_map(self, world) -> Collection:
         markers_link = f"{self._base_url}/maps/{world}/live/markers.json"
         markers_response = await self._get_json(markers_link)
-        marker_sets = []
-        for key, item in markers_response.items():
-            marker_sets.append(MarkerSet._from_response(key=key, response_json=item))
+        marker_sets = Collection._from_response(markers_response)
         return marker_sets
 
     async def close(self):
