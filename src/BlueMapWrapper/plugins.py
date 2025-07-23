@@ -1,0 +1,1 @@
+LANDS = "me.angeschossen.lands"

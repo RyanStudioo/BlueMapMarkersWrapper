@@ -1,5 +1,5 @@
 from __future__ import annotations
-import time
+from typing import Union
 from concurrent.futures import ThreadPoolExecutor
 from typing import Iterable
 from .markers.markers import get_markers
@@ -14,7 +14,8 @@ class MarkerSet:
         self.markers = markers
 
     @staticmethod
-    def _from_response(key:str, response_json: dict) -> "MarkerSet":
+    def _from_response(key:str, response_json: dict) -> Union["MarkerSet", None]:
+        if not response_json: return None
         label = response_json["label"]
         unformattedMarkers = response_json["markers"]
         markers = []
