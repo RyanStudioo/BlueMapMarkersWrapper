@@ -3,8 +3,7 @@ import time
 from concurrent.futures import ThreadPoolExecutor
 from typing import Iterable
 import numpy as np
-
-from src.markers.markers import _get_markers
+from .markers.markers import _get_markers
 if annotations:
     pass
 
