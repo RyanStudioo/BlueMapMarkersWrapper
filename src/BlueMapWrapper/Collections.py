@@ -1,7 +1,7 @@
 from typing import Union
 from .MarkerSet import MarkerSet
 from .player import Player
-from .exceptions import NoMatches, MultipleMatches
+from .exceptions import MultipleMatches
 
 
 class MarkerCollection:
@@ -9,6 +9,21 @@ class MarkerCollection:
     def __init__(self, marker_sets: list[MarkerSet]):
         self.marker_sets = marker_sets
         self.length = len(self.marker_sets)
+        self._idx = 0
+
+    def __iter__(self):
+        self._idx = 0
+        return self
+
+    def __next__(self) -> Union[MarkerSet, None]:
+        if self._idx >= self.length:
+            raise StopIteration
+        value = self.marker_sets[self._idx]
+        self._idx += 1
+        return value
+
+    def __getitem__(self,idx) -> Union[MarkerSet, None]:
+        return self.marker_sets[idx]
 
     @staticmethod
     def _from_response(response: dict) -> Union["MarkerCollection", None]:
@@ -29,6 +44,21 @@ class PlayerCollection:
     def __init__(self, players: list[Player]):
         self.players = players
         self.length = len(players)
+        self._idx = 0
+
+    def __iter__(self):
+        self._idx = 0
+        return self
+
+    def __next__(self) -> Union[Player, None]:
+        if self._idx >= self.length:
+            raise StopIteration
+        value = self.players[self._idx]
+        self._idx += 1
+        return value
+
+    def __getitem__(self,idx) -> Union[Player, None]:
+        return self.players[idx]
 
     @staticmethod
     def _from_response(response: dict) -> Union["PlayerCollection", None]:
