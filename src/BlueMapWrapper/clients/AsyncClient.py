@@ -1,4 +1,3 @@
-from __future__ import annotations
 from concurrent.futures import ThreadPoolExecutor
 import aiohttp
 from typing import Dict
