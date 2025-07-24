@@ -19,6 +19,8 @@ Synchronous Client for requesting. Uses the requests library.
 
 - [base_url]()
 
+<br/>
+
 #### Methods
 
 - [fetch_maps](#fetch_maps)
@@ -26,10 +28,13 @@ Synchronous Client for requesting. Uses the requests library.
 - [fetch_player_collection]()
 - [fetch_collection]()
 
+<br/>
+
 > Parameters
 
 base_url - The base url of the Blue Map
 
+<br/>
 
 > Methods
 
@@ -40,7 +45,7 @@ A list of strings of available maps
 #### Return Type:
 List[Union[Text, None]]
 
-
+<br/><br/>
 
 ### fetch_marker_collection()
 Get a list of available maps from the API.
