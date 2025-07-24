@@ -1,29 +1,29 @@
 import requests
 from concurrent.futures import ThreadPoolExecutor
-from typing import Dict
+from typing import Dict, List, Text, Union
 from ..settings import Settings
 from ..Collections import MarkerCollection, PlayerCollection, Collection
 
 class Client:
     """Synchronous Client for BlueMap"""
     def __init__(self, base_url:str):
-        self._base_url = base_url
+        self.base_url = base_url
 
     def _get_markers_json(self, world:str) -> Dict:
         """Get a markers.json response from the API."""
-        markers_link = f"{self._base_url}/maps/{world}/live/markers.json"
+        markers_link = f"{self.base_url}/maps/{world}/live/markers.json"
         markers_response = self._get_json(markers_link)
         return markers_response
 
     def _get_players_json(self, world:str) -> Dict:
         """Get a players.json response from the API."""
-        players_link = f"{self._base_url}/maps/{world}/live/players.json"
+        players_link = f"{self.base_url}/maps/{world}/live/players.json"
         players_response = self._get_json(players_link)
         return players_response
 
-    def fetch_maps(self):
+    def fetch_maps(self) -> List[Union[Text, None]]:
         """Get a list of available maps from the API."""
-        settings_link = f"{self._base_url}/settings.json"
+        settings_link = f"{self.base_url}/settings.json"
         settings_response = self._get_json(settings_link)
         settings = Settings.from_response(settings_response)
         return settings.maps

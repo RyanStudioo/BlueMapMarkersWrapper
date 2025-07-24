@@ -1,6 +1,52 @@
 # BlueMapWrapper.py
 An open-sourced API wrapper for BlueMap for Python!!
 
-
+This wrapper is used for getting information from existing Blue Maps, NOT to create one
 
 ## Versioning Information
+> BlueMapWrapper.version_info
+ 
+Returns a string with the version of the module
+
+## Clients
+
+### Client
+> class BlueMapWrapper.Client
+
+Synchronous Client for requesting. Uses the requests library.
+
+#### Parameters
+
+- [base_url]()
+
+#### Methods
+
+- [fetch_maps](#fetch_maps)
+- [fetch_marker_collection]()
+- [fetch_player_collection]()
+- [fetch_collection]()
+
+> Parameters
+
+base_url - The base url of the Blue Map
+
+
+> Methods
+
+### fetch_maps()
+Get a list of available maps from the API.
+#### Returns:
+A list of strings of available maps
+#### Return Type:
+List[Union[Text, None]]
+
+
+
+### fetch_marker_collection()
+Get a list of available maps from the API.
+#### Parameters:
+ - world (str): The name of the world to fetch from
+#### Returns:
+MarkerCollection Object with all available marker collections
+#### Return Type:
+[MarkerCollection]()

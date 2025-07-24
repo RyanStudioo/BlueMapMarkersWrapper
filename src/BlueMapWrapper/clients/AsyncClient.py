@@ -9,26 +9,26 @@ class AsyncClient:
     """Asynchronous Client for BlueMap"""
     def __init__(self, base_url:str):
         self._session = aiohttp.ClientSession()
-        self._base_url = base_url
+        self.base_url = base_url
 
     async def __aexit__(self):
         await self._session.close()
 
     async def _get_markers_json(self, world:str) -> Dict:
         """Get a markers.json response from the API."""
-        markers_link = f"{self._base_url}/maps/{world}/live/markers.json"
+        markers_link = f"{self.base_url}/maps/{world}/live/markers.json"
         markers_response = await self._get_json(markers_link)
         return markers_response
 
     async def _get_players_json(self, world:str) -> Dict:
         """Get a players.json response from the API."""
-        players_link = f"{self._base_url}/maps/{world}/live/players.json"
+        players_link = f"{self.base_url}/maps/{world}/live/players.json"
         players_response = await self._get_json(players_link)
         return players_response
 
     async def fetch_maps(self):
         """Get a list of available maps from the API."""
-        settings_link = f"{self._base_url}/settings.json"
+        settings_link = f"{self.base_url}/settings.json"
         settings_response = await self._get_json(settings_link)
         settings = Settings.from_response(settings_response)
         return settings.maps
