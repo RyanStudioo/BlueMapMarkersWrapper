@@ -9,7 +9,6 @@ class Client:
     def __init__(self, base_url:str):
         self._base_url = base_url
 
-
     def _get_markers_json(self, world:str) -> Dict:
         """Get a markers.json response from the API."""
         markers_link = f"{self._base_url}/maps/{world}/live/markers.json"
