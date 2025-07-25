@@ -40,7 +40,7 @@ class Client:
         players_collection = PlayerCollection._from_response(players_response)
         return players_collection
 
-    async def fetch_collection(self, world:str) -> Collection:
+    def fetch_collection(self, world:str) -> Collection:
         """Get a Collection Object with both players.json and markers.json responses.
         Get PlayerCollection Object with Collection.player_collection
         Get MarkerCollection Object with Collection.marker_collection"""
