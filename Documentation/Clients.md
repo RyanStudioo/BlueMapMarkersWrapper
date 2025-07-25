@@ -90,10 +90,10 @@ Faster than [Client](#client), suitable for larger and more complex projects
 
 ### Methods
 
-- [fetch_maps](#await-fetch_maps)
-- [fetch_marker_collection](#await-fetch_marker_collection)
-- [fetch_player_collection](#await-fetch_players_collection)
-- [fetch_collection](#await-fetch_collection)
+- [*await* fetch_maps](#await-fetch_maps)
+- [*await* fetch_marker_collection](#await-fetch_marker_collection)
+- [*await* fetch_player_collection](#await-fetch_players_collection)
+- [*await* fetch_collection](#await-fetch_collection)
 
 <br/>
 
@@ -105,7 +105,7 @@ The base url of the Blue Map
 <br/>
 
 > Methods
-## await fetch_maps()
+## *await* fetch_maps()
 Get a list of available maps from the API.
 ### Returns:
 A list of strings of available maps
@@ -114,7 +114,7 @@ List[Union[Text, None]]
 
 <br/>
 
-## await fetch_marker_collection()
+## *await* fetch_marker_collection()
 Get a list of available maps from the API.
 ### Parameters:
  - world (str): The name of the world to fetch from
@@ -125,7 +125,7 @@ MarkerCollection Object with all available marker collections
 
 <br/>
 
-## await fetch_players_collection()
+## *await* fetch_players_collection()
 Get a list of all visible players from the API.
 ### Parameters:
  - world (str): The name of the world to fetch from
@@ -134,7 +134,7 @@ PlayerCollection Object with all available players
 ### Return Type:
 [PlayerCollection]()
 
-## await fetch_collection()
+## *await* fetch_collection()
 Get a lists of MarkerSets and visible players form the API.
 ### Parameters:
  - world (str): The name of the world to fetch from
