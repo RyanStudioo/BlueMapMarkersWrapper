@@ -2,11 +2,11 @@ from __future__ import annotations
 from typing import Union
 
 if annotations:
-    from ..markers.ExtrudeMarker import ExtrudeMarker
-    from ..markers.HTMLMarker import HTMLMarker
-    from ..markers.POIMarker import POIMarker
-    from ..markers.LineMarker import LineMarker
-    from ..markers.ShapeMarker import ShapeMarker
+    from .ExtrudeMarker import ExtrudeMarker
+    from .HTMLMarker import HTMLMarker
+    from .POIMarker import POIMarker
+    from .LineMarker import LineMarker
+    from .ShapeMarker import ShapeMarker
 
 markerTypes = {'poi': POIMarker,
                'html': HTMLMarker,

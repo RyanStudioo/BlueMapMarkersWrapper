@@ -1,10 +1,10 @@
-import BlueMapWrapper
+import bluemap_wrapper
 import datetime
 import time
 import asyncio
 
 async def main():
-    client = BlueMapWrapper.AsyncClient('http://map.eldrath.com:20098')   # Initialise Client
+    client = bluemap_wrapper.AsyncClient('http://map.eldrath.com:20098')   # Initialise Client
     logged_players = []
     while True:
         start = time.time()

@@ -1,4 +1,4 @@
-from BlueMapWrapper import AsyncClient, KEYS
+from bluemap_wrapper import AsyncClient, KEYS
 import asyncio
 
 async def main():

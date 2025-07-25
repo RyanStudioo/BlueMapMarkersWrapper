@@ -1,9 +1,10 @@
+*[<u>Back to README.md</u>](../README.md)*
 # Clients
 - [Client](#client)
 - [AsyncClient](#asyncclient)
 
 ## Client
-> class BlueMapWrapper.Client
+> class bluemap_wrapper.Client
 
 Synchronous Client for requesting, uses the requests library.
 
@@ -13,7 +14,6 @@ Slower than [AsyncClient](#asyncclient), more suitable for short and simple proj
 
 - [base_url](#base_url-str)
 
-<br/>
 
 ### Methods
 
@@ -62,7 +62,7 @@ PlayerCollection Object with all available players
 [PlayerCollection]()
 
 ## fetch_collection()
-Get a lists of MarkerSets and visible players form the API.
+Get a lists of MarkerSets and visible players form the API. Offers faster performance due to threaded requesting
 #### Parameters:
  - world (str): The name of the world to fetch from
 ### Returns:
@@ -76,7 +76,7 @@ Collection Object with a MarkerCollection and PlayerCollection Object
 
 
 ## AsyncClient
-> class BlueMapWrapper.AsyncClient
+> class bluemap_wrapper.AsyncClient
 
 Asynchronous Client for requesting, uses the aiohttp library.
 
@@ -85,8 +85,6 @@ Faster than [Client](#client), suitable for larger and more complex projects
 ### Parameters
 
 - [base_url](#base_url-str-1)
-
-<br/>
 
 ### Methods
 
@@ -135,7 +133,7 @@ PlayerCollection Object with all available players
 [PlayerCollection]()
 
 ## *await* fetch_collection()
-Get a lists of MarkerSets and visible players form the API.
+Get a lists of MarkerSets and visible players form the API. Offers faster performance due to threaded requesting
 ### Parameters:
  - world (str): The name of the world to fetch from
 ### Returns:

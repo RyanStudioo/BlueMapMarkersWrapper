@@ -1,5 +1,5 @@
 import asyncio
-from BlueMapWrapper import AsyncClient, KEYS
+from bluemap_wrapper import AsyncClient, KEYS
 
 async def main():
     # printing out all players and lands plugin markers

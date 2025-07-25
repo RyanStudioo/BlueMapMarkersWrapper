@@ -31,7 +31,7 @@ class MarkerCollection:
         return MarkerCollection([MarkerSet._from_response(key, item) for key, item in response.items()])
 
     def from_key(self, key:str) -> Union[MarkerSet, None]:
-        """Get a MarkerSet by its name. Use BlueMapWrapper.marker_keys for plugins"""
+        """Get a MarkerSet by its name. Use bluemap_wrapper.marker_keys for plugins"""
         matches = [i for i in self.marker_sets if i.key == key]
         if not matches:
             return None
@@ -65,6 +65,14 @@ class PlayerCollection:
         """Create a PlayerCollection Object from players.json"""
         players = response['players']
         return PlayerCollection([Player._from_response(item) for item in players])
+
+    def is_foreign(self) -> list[Union[Player, None]]:
+        """Get a list of players who have the foreign attribute (not in the world requested)"""
+        return [i for i in self.players if i.foreign]
+
+    def not_foreign(self) -> list[Union[Player, None]]:
+        """Get a list of players who do not have the foreign attribute (in the world requested)"""
+        return [i for i in self.players if not i.foreign]
 
     def from_uuid(self, uuid:str) -> Union[Player, None]:
         """Get a Player Object by uuid"""
