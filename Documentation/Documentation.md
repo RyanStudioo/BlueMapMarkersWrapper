@@ -17,14 +17,14 @@ Synchronous Client for requesting. Uses the requests library.
 
 #### Parameters
 
-- [base_url]()
+- [base_url](#base_url)
 
 <br/>
 
 #### Methods
 
 - [fetch_maps](#fetch_maps)
-- [fetch_marker_collection]()
+- [fetch_marker_collection](#)
 - [fetch_player_collection]()
 - [fetch_collection]()
 
@@ -32,7 +32,8 @@ Synchronous Client for requesting. Uses the requests library.
 
 > Parameters
 
-base_url - The base url of the Blue Map
+#### base_url (str)
+The base url of the Blue Map
 
 <br/>
 
