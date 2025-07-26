@@ -70,14 +70,14 @@ Contains a list of Player Objects
 This class is also Iterable on its own
 
 ### Attributes
- - [players]()
- - [length]()
+ - [players](#players-listplayer)
+ - [length](#length-int-1)
 
 ### Methods
- - [is_foreign()]()
- - [not_foreign]()
- - [from_uuid()]()
- - [from_name()]()
+ - [is_foreign()](#is_foreign)
+ - [not_foreign](#not_foreign)
+ - [from_uuid()](#from_uuiduuid)
+ - [from_name()](#from_namename)
 
 > Attributes
 

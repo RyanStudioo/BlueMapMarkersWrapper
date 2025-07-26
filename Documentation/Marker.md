@@ -92,3 +92,23 @@ A Marker that displays a line connecting several points
 A list of Position Objects that forms the line
 ### detail (str)
 HTML information of the Marker
+
+<br/>
+
+## ShapeMarker(BaseMarker)
+> class BlueMapWrapper.ShapeMarker
+
+A Marker that displays a 2D shape on the x and z axis
+### Attributes
+ - [BaseMarker Attributes](#attributes)
+ - [shape](#shape-listposition-1)
+ - [shape_y](#shape_y-int)
+ - [detail](#detail-str-2)
+
+> Attributes
+### shape (list[[Position]()])
+A list of Position Objects that traces and forms the shape
+### shape_y (int)
+Where the y level of the shape will be placed at
+### detail (str)
+HTML information of the Marker
