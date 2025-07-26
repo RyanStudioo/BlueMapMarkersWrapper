@@ -1,4 +1,6 @@
 <h1><img alt="bluemap logo" src="Documentation/images/bluemap_logo.png" height=25px> BlueMapWrapper</h1>
+<a href="https://discord.gg/sBMqepFV6m"><img src="https://discord.com/api/guilds/1386414999932506197/embed.png" alt="Discord Link" height="20"></a>
+<a href='https://ko-fi.com/O5O1180EK8' target='_blank'><img height='36' style='border:0px;height:20px;' src='https://storage.ko-fi.com/cdn/kofi6.png?v=6' border='0' alt='Buy Me a Coffee at ko-fi.com' /></a>
 
 An open-sourced API wrapper for BlueMap for Python!!
 
@@ -11,7 +13,7 @@ This wrapper is used for getting information from existing Blue Maps, NOT to cre
 > python -m pip install bluemap_wrapper
 
 ## Quick Example
-```commandline
+```python
 import asyncio
 from bluemap_wrapper import AsyncClient, KEYS
 

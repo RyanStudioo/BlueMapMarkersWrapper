@@ -7,7 +7,9 @@ class Position:
 
     @staticmethod
     def _from_response(response: dict) -> "Position":
-        """Create a Position Object from players.json. Response obtained from players.json -> player -> position"""
+        """Create a Position Object from players.json or markers.json."""
+        if 'y' not in response:
+            response['y'] = 0
         return Position(response['x'], response['y'], response['z'])
 
 class Rotation:

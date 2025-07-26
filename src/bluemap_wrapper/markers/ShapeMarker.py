@@ -1,10 +1,11 @@
 from __future__ import annotations
+from ..coordinates import Position
 if annotations:
     from .BaseMarker import BaseMarker
 
 class ShapeMarker(BaseMarker):
     """A Shape marker is a 2D plane on a map"""
-    def __init__(self, key: str, label: str, position: dict, shape:list, shape_y:int, detail:str=None):
+    def __init__(self, key: str, label: str, position: Position, shape:list[Position], shape_y:int, detail:str=None):
         super().__init__(key, label, position)
         self.shape = shape
         self.shape_y = shape_y
@@ -17,8 +18,8 @@ class ShapeMarker(BaseMarker):
         key = response[0]
         response = response[1]
         label = response['label']
-        position = response['position']
-        shape = response['shape']
-        shape_y = response['shapeY']
+        position = Position._from_response(response['position'])
+        shape = [Position._from_response(i) for i in response['shape']]
+        shape_y = response['shape-y']
         detail = response['detail']
         return ShapeMarker(key, label, position, shape, shape_y, detail=detail)

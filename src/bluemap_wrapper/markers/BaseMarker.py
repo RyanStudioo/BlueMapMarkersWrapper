@@ -1,8 +1,8 @@
-
+from ..coordinates import Position
 
 class BaseMarker:
     """Base class for all markers"""
-    def __init__(self, key: str, label: str, position:dict):
+    def __init__(self, key: str, label: str, position:Position):
         self.key = key
         self.label = label
         self.position = position

@@ -1,0 +1,66 @@
+*[<u>Back to README.md</u>](../README.md)*
+# MarkerSets
+ - [MarkerSet]()
+
+## MarkerSet
+> class bluemap_wrapper.MarkerSet
+
+A MarkerSet is a set of markers. They may have similar properties such as land markers in the lands plugin, or may be
+custom made.
+
+### Attributes
+ - [key](#key-str)
+ - [label](#label-str)
+ - [markers](#markers-listmarker)
+ - [length](#length-int)
+### Methods
+ - [extrude_markers()](#extrude_markers)
+ - [html_markers()](#html_markers)
+ - [line_markers()](#line_markers)
+ - [poi_markers()](#poi_markers)
+ - [shape_markers()](#shape_markers)
+
+<br/>
+
+> Attributes
+### key (str)
+The key of the [MarkerSet](#markerset)
+### label (str)
+The set name of the [MarkerSet](#markerset)
+### markers (list[[Marker]()])
+A list of markers in the [MarkerSet](#markerset)
+### length (int)
+The amount of markers in [markers](#markers-listmarker)
+
+<br/>
+
+> Methods
+## extrude_markers()
+### Returns:
+A list of ExtrudeMarker Objects from [markers](#markers-listmarker)
+### Return Type:
+list(Union[ExtrudeMarker, None])
+
+## html_markers()
+### Returns:
+A list of HTMLMarker Objects from [markers](#markers-listmarker)
+### Return Type:
+list(Union[HTMLMarker, None])
+
+## line_markers()
+### Returns:
+A list of LineMarker Objects from [markers](#markers-listmarker)
+### Return Type:
+list(Union[LineMarker, None])
+
+## poi_markers()
+### Returns:
+A list of POIMarker Objects from [markers](#markers-listmarker)
+### Return Type:
+list(Union[POIMarker, None])
+
+## shape_markers()
+### Returns:
+A list of ShapeMarker Objects from [markers](#markers-listmarker)
+### Return Type:
+list(Union[ShapeMarker, None])

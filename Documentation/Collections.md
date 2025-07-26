@@ -1,8 +1,8 @@
 *[<u>Back to README.md</u>](../README.md)*
 # Collections
 - [Collection](#collection)
-- [MarkerCollection]()
-- [PlayerCollection]()
+- [MarkerCollection](#markercollection)
+- [PlayerCollection](#playercollection)
 
 ## Collection
 > class bluemap_wrapper.Collection
