@@ -51,13 +51,13 @@ The amount of MarkerSet Objects in [marker_sets](#marker_sets-listmarkerset)
 <br/>
 
 > Methods
-## from_key(key)
+### from_key(key)
 Get a MarkerSet from [marker_sets](#marker_sets-listmarkerset) by its name
-### Parameters
+#### Parameters
  - key (str): The name of the MarkerSet, a key from bluemap_wrapper.KEYS can be used, or a custom one can be entered
-### Returns:
+#### Returns:
 Returns a Requested MarkerSet
-### Return Type:
+#### Return Type:
 Union[MarkerSet, None]
 
 <br/>
@@ -90,42 +90,42 @@ The amount of Player Objects in [players](#players-listplayer)
 <br/>
 
 > Methods
-## is_foreign()
+### is_foreign()
 Get a list of players who have the foreign attribute (not in the world requested)
-### Returns:
+#### Returns:
 A list of Player Objects that are foreign
-### Return Type:
+#### Return Type:
 list(Union[[Player](), None])
 
 <br/>
 
-## not_foreign()
+### not_foreign()
 Get a list of players who do not have the foreign attribute (in the world requested)
-### Returns:
+#### Returns:
 A list of Player Objects that are not foreign
-### Return Type:
+#### Return Type:
 list(Union[[Player](), None])
 
 <br/>
 
-## from_uuid(uuid)
+### from_uuid(uuid)
 Get a Player Object by uuid
-### Parameters
+#### Parameters
  - uuid (str): The UUID of the Player, the UUID must be exact with "-" in it
-### Returns:
+#### Returns:
 a Player object with the requested UUID
-### Return Type:
+#### Return Type:
 Union[Player, None]
 
 <br/>
 
-## from_name(name)
+### from_name(name)
 Get a Player Object from its Name
-### Parameters
+#### Parameters
  - name (str): The name of the Player
-### Returns:
+#### Returns:
 a Player object with the requested name
-### Return Type:
+#### Return Type:
 Union[Player, None]
 
 

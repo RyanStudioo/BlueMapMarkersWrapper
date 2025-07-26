@@ -35,32 +35,32 @@ The amount of markers in [markers](#markers-listmarker)
 <br/>
 
 > Methods
-## extrude_markers()
-### Returns:
+### extrude_markers()
+#### Returns:
 A list of ExtrudeMarker Objects from [markers](#markers-listmarker)
-### Return Type:
+#### Return Type:
 list(Union[ExtrudeMarker, None])
 
-## html_markers()
-### Returns:
+### html_markers()
+#### Returns:
 A list of HTMLMarker Objects from [markers](#markers-listmarker)
-### Return Type:
+#### Return Type:
 list(Union[HTMLMarker, None])
 
-## line_markers()
-### Returns:
+### line_markers()
+#### Returns:
 A list of LineMarker Objects from [markers](#markers-listmarker)
-### Return Type:
+#### Return Type:
 list(Union[LineMarker, None])
 
-## poi_markers()
-### Returns:
+### poi_markers()
+#### Returns:
 A list of POIMarker Objects from [markers](#markers-listmarker)
-### Return Type:
+#### Return Type:
 list(Union[POIMarker, None])
 
-## shape_markers()
-### Returns:
+### shape_markers()
+#### Returns:
 A list of ShapeMarker Objects from [markers](#markers-listmarker)
-### Return Type:
+#### Return Type:
 list(Union[ShapeMarker, None])
