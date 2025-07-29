@@ -53,3 +53,4 @@ if __name__ == '__main__':
   - [Collection](Documentation/Collections.md#collection)
   - [MarkerCollection](Documentation/Collections.md#markercollection)
   - [PlayerCollection](Documentation/Collections.md#playercollection)
+- ## [Markers](Documentation/Marker#markers)

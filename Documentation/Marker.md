@@ -1,9 +1,14 @@
 *[<u>Back to README.md</u>](../README.md)*
 # Markers
  - [BaseMarker](#basemarker)
+ - [ExtrudeMarker](#extrudemarkerbasemarker)
+ - [HTMLMarker](#htmlmarkerbasemarker)
+ - [LineMarker](#linemarkerbasemarker)
+ - [POIMarker](#poimarkerbasemarker)
+ - [ShapeMarker](#shapemarkerbasemarker)
 
 ## BaseMarker
-> class bluemap_wrapper.BaseMarker
+> class BlueMapWrapper.BaseMarker
 
 The Base class of all other Markers
 ### Attributes
@@ -22,7 +27,7 @@ The position of a marker
 <br/>
 
 ## ExtrudeMarker(BaseMarker)
-> class bluemap_wrapper.ExtrudeMarker
+> class BlueMapWrapper.ExtrudeMarker
 
 A Marker with a 3D shape
 ### Attributes
@@ -45,7 +50,7 @@ HTML information of the Marker
 <br/>
 
 ## HTMLMarker(BaseMarker)
-> class bluemap_wrapper.HTMLMarker
+> class BlueMapWrapper.HTMLMarker
  
 A Marker that displays HTML code
 ### Attributes
@@ -62,7 +67,7 @@ a list of CSS classes to be applied to [html](#html-str)
 <br/>
 
 ## LineMarker(BaseMarker)
-> class bluemap_wrapper.LineMarker
+> class BlueMapWrapper.LineMarker
  
 A Marker that displays a line connecting several points
 ### Attributes
@@ -79,7 +84,7 @@ HTML information of the Marker
 <br/>
 
 ## POIMarker(BaseMarker)
-> class bluemap_wrapper.POIMarker
+> class BlueMapWrapper.POIMarker
  
 A Marker that displays a line connecting several points
 ### Attributes

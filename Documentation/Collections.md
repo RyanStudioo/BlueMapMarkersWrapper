@@ -38,11 +38,11 @@ This class is also Iterable on its own
  - [length](#length-int)
 
 ### Methods
- - [from_key()]()
+ - [from_key()](#from_keykey)
 
 > Attributes
 
-### marker_sets (list[[MarkerSet]()])
+### marker_sets (list[[MarkerSet](MarkerSet.md#markerset)])
 A list of MarkerSet Objects
 
 ### length (int)
@@ -58,7 +58,7 @@ Get a MarkerSet from [marker_sets](#marker_sets-listmarkerset) by its name
 #### Returns:
 Returns a Requested MarkerSet
 #### Return Type:
-Union[MarkerSet, None]
+Union[[MarkerSet](MarkerSet.md#markerset), None]
 
 <br/>
 

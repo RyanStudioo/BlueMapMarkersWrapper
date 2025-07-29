@@ -34,7 +34,7 @@ class Client:
         marker_collection = MarkerCollection._from_response(markers_response)
         return marker_collection
 
-    def fetch_players_collection(self, world:str) -> PlayerCollection:
+    def fetch_player_collection(self, world:str) -> PlayerCollection:
         """Get a PlayerCollection Object from players.json response"""
         players_response = self._get_players_json(world)
         players_collection = PlayerCollection._from_response(players_response)
@@ -46,7 +46,7 @@ class Client:
         Get MarkerCollection Object with Collection.marker_collection"""
         with ThreadPoolExecutor(max_workers=2) as executor:
             markers = executor.submit(self.fetch_marker_collection, world)
-            players = executor.submit(self.fetch_players_collection, world)
+            players = executor.submit(self.fetch_player_collection, world)
         collection = Collection(markers.result(), players.result())
         return collection
 

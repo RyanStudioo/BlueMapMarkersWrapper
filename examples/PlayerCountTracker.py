@@ -9,7 +9,7 @@ async def main():
     while True:
         start = time.time()
         maps = await client.fetch_maps()   # Fetch list of available maps
-        players_collection = await client.fetch_players_collection(maps[0]) # Get Player Collection obj of online players
+        players_collection = await client.fetch_player_collection(maps[0]) # Get Player Collection obj of online players
 
         if players_collection.length == 0:
             print(f"{datetime.datetime.now()} No players found.")
