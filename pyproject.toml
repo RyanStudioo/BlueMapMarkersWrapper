@@ -3,7 +3,7 @@ requires = ["setuptools >= 77.0.3"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "bluemap_wrapper"
+name = "BlueMapWrapper"
 version = "1.0"
 authors = [
   { name="RyanStudio", email="ryanstudiobusiness@gmail.com" },
