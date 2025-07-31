@@ -5,7 +5,7 @@
 - [PlayerCollection](#playercollection)
 
 ## Collection
-> class bluemap_wrapper.Collection
+> class BlueMapWrapper.Collection
 
 Contains a [MarkerCollection](#markercollection) and [PlayerCollection](#playercollection) Object
 
@@ -29,7 +29,7 @@ a PlayerCollection Object
 ## MarkerCollection
 > class bluemap_wrapper.MarkerCollection
 
-Contains a list of MarkerSet Objects
+Contains a list of [MarkerSet](MarkerSet.md#markerset) Objects
 
 This class is also Iterable on its own
 

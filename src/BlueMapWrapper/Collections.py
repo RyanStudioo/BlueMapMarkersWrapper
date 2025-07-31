@@ -31,7 +31,7 @@ class MarkerCollection:
         return MarkerCollection([MarkerSet._from_response(key, item) for key, item in response.items()])
 
     def from_key(self, key:str) -> Union[MarkerSet, None]:
-        """Get a MarkerSet by its name. Use bluemap_wrapper.marker_keys for plugins"""
+        """Get a MarkerSet by its name. Use BlueMapWrapper.marker_keys for plugins"""
         matches = [i for i in self.marker_sets if i.key == key]
         if not matches:
             return None

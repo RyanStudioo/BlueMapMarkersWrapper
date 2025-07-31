@@ -1,4 +1,4 @@
-from ..coordinates import Position
+from ..positioning import Position
 
 class BaseMarker:
     """Base class for all markers"""

@@ -38,7 +38,7 @@ A Marker with a 3D shape
  - [detail](#detail-optionalunionstr-none)
 
 > Attributes
-### shape (list[[Position]()])
+### shape (list[[Position](Positioning.md#position)])
 A list of coordinates that traces the shape on the x and z axis
 ### shape_min_y (int)
 The lowest point of the shape
@@ -76,7 +76,7 @@ A Marker that displays a line connecting several points
  - [detail](#detail-str)
 
 > Attributes
-### line (list[[Position]()])
+### line (list[[Position](Positioning.md#position)])
 A list of Position Objects that forms the line
 ### detail (str)
 HTML information of the Marker
@@ -93,7 +93,7 @@ A Marker that displays a line connecting several points
  - [detail](#detail-str)
 
 > Attributes
-### line (list[[Position]()])
+### line (list[[Position](Positioning.md#position)])
 A list of Position Objects that forms the line
 ### detail (str)
 HTML information of the Marker
@@ -111,7 +111,7 @@ A Marker that displays a 2D shape on the x and z axis
  - [detail](#detail-str-2)
 
 > Attributes
-### shape (list[[Position]()])
+### shape (list[[Position](Positioning.md#position)])
 A list of Position Objects that traces and forms the shape
 ### shape_y (int)
 Where the y level of the shape will be placed at

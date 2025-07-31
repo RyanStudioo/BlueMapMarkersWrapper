@@ -3,7 +3,7 @@
  - [MarkerSet](#markerset)
 
 ## MarkerSet
-> class bluemap_wrapper.MarkerSet
+> class BlueMapWrapper.MarkerSet
 
 A MarkerSet is a set of markers. They may have similar properties such as land markers in the lands plugin, or may be
 custom made.
@@ -41,11 +41,15 @@ A list of ExtrudeMarker Objects from [markers](#markers-listmarkermarkermdmarker
 #### Return Type:
 list(Union[[ExtrudeMarker](Marker.md#extrudemarkerbasemarker), None])
 
+<br/>
+
 ### html_markers()
 #### Returns:
 A list of HTMLMarker Objects from [markers](#markers-listmarkermarkermdmarkers)
 #### Return Type:
 list(Union[[HTMLMarker](Marker.md#htmlmarkerbasemarker), None])
+
+<br/>
 
 ### line_markers()
 #### Returns:
@@ -53,11 +57,15 @@ A list of LineMarker Objects from [markers](#markers-listmarkermarkermdmarkers)
 #### Return Type:
 list(Union[[LineMarker](Marker.md#linemarkerbasemarker), None])
 
+<br/>
+
 ### poi_markers()
 #### Returns:
 A list of POIMarker Objects from [markers](#markers-listmarkermarkermdmarkers)
 #### Return Type:
 list(Union[[POIMarker](Marker.md#poimarkerbasemarker), None])
+
+<br/>
 
 ### shape_markers()
 #### Returns:

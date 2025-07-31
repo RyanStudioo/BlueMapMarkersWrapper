@@ -1,4 +1,4 @@
-from .coordinates import Position, Rotation
+from .positioning import Position, Rotation
 
 class Player:
     """Information of a player"""

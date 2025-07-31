@@ -1,5 +1,5 @@
 class Position:
-    """Set of Position Coordinates for a Player or Marker Object"""
+    """Set of Coordinates for a Player or Marker Object"""
     def __init__(self, x:float, y:float, z:float):
         self.x = x
         self.y = y
@@ -7,7 +7,7 @@ class Position:
 
     @staticmethod
     def _from_response(response: dict) -> "Position":
-        """Create a Position Object from players.json or markers.json."""
+        """Create a Coordinate Object from players.json or markers.json."""
         if 'y' not in response:
             response['y'] = 0
         return Position(response['x'], response['y'], response['z'])
