@@ -20,8 +20,8 @@ license-files = ["LICEN[CS]E*"]
 dependencies = [
     "requests>=2.32.4",
     "aiohttp>=4.0.0a1",
-
 ]
+keywords = ["BlueMap", "BlueMapWrapper", "BlueMapWrapper.py"]
 
 [project.urls]
 Homepage = "https://github.com/RyanStudioo/BlueMapMarkersWrapper"
