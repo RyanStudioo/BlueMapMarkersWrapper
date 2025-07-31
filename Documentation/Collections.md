@@ -81,7 +81,7 @@ This class is also Iterable on its own
 
 > Attributes
 
-### players (list[[Player]()])
+### players (list[[Player](Player.md#player)])
 A list of Player Objects
 
 ### length (int)
@@ -95,7 +95,7 @@ Get a list of players who have the foreign attribute (not in the world requested
 #### Returns:
 A list of Player Objects that are foreign
 #### Return Type:
-list(Union[[Player](), None])
+list(Union[[Player](Player.md#player), None])
 
 <br/>
 
@@ -104,7 +104,7 @@ Get a list of players who do not have the foreign attribute (in the world reques
 #### Returns:
 A list of Player Objects that are not foreign
 #### Return Type:
-list(Union[[Player](), None])
+list(Union[[Player](Player.md#player), None])
 
 <br/>
 
@@ -115,7 +115,7 @@ Get a Player Object by uuid
 #### Returns:
 a Player object with the requested UUID
 #### Return Type:
-Union[Player, None]
+Union[[Player](Player.md#player), None]
 
 <br/>
 
@@ -126,7 +126,7 @@ Get a Player Object from its Name
 #### Returns:
 a Player object with the requested name
 #### Return Type:
-Union[Player, None]
+Union[[Player](Player.md#player), None]
 
 
 
