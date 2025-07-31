@@ -8,9 +8,9 @@ This wrapper is used for getting information from existing Blue Maps, NOT to cre
 
 # Installation
 >## Windows
-> pip install bluemap_wrapper
+> pip install BlueMapWrapper
 > ## Linux
-> python -m pip install bluemap_wrapper
+> python -m pip install BlueMapWrapper
 
 ## Quick Example
 
